@@ -1,0 +1,23 @@
+{% extends "app_paginas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<h1 class="text-center mt-4">Usuario: {{usuario.username}}</h1>
+    <div class="container">
+        <img src= "{{user.perfil.photo.url}}" alt= "" style="width: 150px; height: 150px; object-fit: cover;">
+    </div>    
+
+    <div class="container">
+        <p>Nombre: {{usuario.first_name}}</p>
+        <p>Apellido: {{usuario.last_name}}</p>
+        <p>Correo electrónico: {{usuario.email}}</p>
+    </div>
+    <div class="container">
+        <div class= "text-center mt-4">
+            <a class= "btn btn-primary" href= "{% url 'editar perfil' %}">Editar perfil</a>
+        </div>
+        <div class= "text-center mt-4">
+            <a class= "btn btn-primary" href= "{% url 'cambiar clave' %}">Cambiar contraseña</a>
+        </div>
+    </div>
+{% endblock %}

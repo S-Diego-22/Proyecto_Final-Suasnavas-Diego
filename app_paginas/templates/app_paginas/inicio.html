@@ -1,0 +1,107 @@
+{% extends "app_paginas/base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5">Punto Científico</h1>
+                    <h5>
+                        <p>Tu tienda en línea especializada en equipos y productos de laboratorio de alta calidad.</p>
+                        <p>En Punto Científico, ofrecemos una amplia gama de soluciones para profesionales en el campo de la ciencia, 
+                            la investigación y la educación.
+                        </p> 
+                        <p>Desde instrumentos de precisión hasta materiales de uso diario, 
+                            todos nuestros productos están seleccionados cuidadosamente para garantizar el mejor rendimiento y confiabilidad.
+                        </p>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Icons Grid-->
+<div class="container position-relative">
+    <div class="row justify-content-center">
+        <div class="text-center text-black">
+            <h1 class="mb-5">¿Por qué elegir Punto Científico?</h1>
+        </div>
+    </div>
+</div>
+
+<section class="features-icons bg-light text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex"><i class="bi-check-circle m-auto text-primary"></i></div>
+                    <h3>Calidad garantizada</h3>
+                    <p class="lead mb-0">Trabajamos con las mejores marcas para ofrecerte equipos que cumplen con los más altos estándares de calidad.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                    <h3>Variedad de productos</h3>
+                    <p class="lead mb-0">Encuentra lo que necesitas, ya sea para investigación, enseñanza o análisis, en un solo lugar.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex"><i class="bi-phone m-auto text-primary"></i></div>
+                    <h3>Asesoramiento especializado</h3>
+                    <p class="lead mb-0">Nuestro equipo de expertos está a tu disposición para ayudarte a elegir los productos más adecuados para tu proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonials-->
+<section class="testimonials text-center bg-light">
+    <div class="container">
+        <h2 class="mb-5">Nos manejamos con marcas prestigiosas como...</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-square mb-3" src="{% static 'app_paginas/assets/img/bioair.png' %}" alt="..." />
+                    <h5>Bioair</h5>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-square mb-3" src="{% static 'app_paginas/assets/img/canvax.png' %}" alt="..." />
+                    <h5>Canvax</h5>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-square mb-3" src="{% static 'app_paginas/assets/img/cicarelli.png' %}" alt="..." />
+                    <h5>Cicarelli</h5>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-square mb-3" src="{% static 'app_paginas/assets/img/Eppendorf.png' %}" alt="..." />
+                    <h5>Eppendorf</h5>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-square mb-3" src="{% static 'app_paginas/assets/img/Ohaus.png' %}" alt="..." />
+                    <h5>Ohaus</h5>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-square mb-3" src="{% static 'app_paginas/assets/img/RPI.png' %}" alt="..." />
+                    <h5>RPI</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

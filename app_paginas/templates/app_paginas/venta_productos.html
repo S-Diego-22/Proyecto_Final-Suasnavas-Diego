@@ -1,0 +1,46 @@
+{% extends "app_paginas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<div class="container-fluid my-5">
+    <h1 class="text-center mb-4">Nuestros productos</h1>
+    <div class="row gy-4">
+        {% for producto in productos %}
+        <div class="col-12">
+            <div class="row align-items-center 
+                {% if forloop.counter|divisibleby:2 %}
+                    flex-row-reverse
+                {% endif %}">
+                <div class="col-md-6">
+                    <img src="{{ producto.imagen.url }}" class="img-fluid w-100 h-300 rounded" alt="{{ producto.nombre }}">
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    {% if producto.nombre == "Equipos" %}
+                        <a href="{% url 'equipos' %}">
+                            <h1>{{ producto.nombre }}</h1>
+                        </a>
+                    {% elif producto.nombre == "Kits" %}
+                        <a href="{% url 'kits' %}">
+                            <h1>{{ producto.nombre }}</h1>
+                        </a>
+                    {% elif producto.nombre == "Material" %}
+                        <a href="{% url 'material' %}">
+                            <h1>{{ producto.nombre }}</h1>
+                        </a>
+                    {% elif producto.nombre == "Medio Cultivo" %}
+                        <a href="{% url 'medios de cultivo' %}">
+                            <h1>{{ producto.nombre }}</h1>
+                        </a>
+                    {% elif producto.nombre == "Reactivos" %}
+                        <a href="{% url 'reactivos' %}">
+                            <h1>{{ producto.nombre }}</h1>
+                        </a>
+                    {% endif %}
+                    <p><h2>{{ producto.descripcion }}</h2></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

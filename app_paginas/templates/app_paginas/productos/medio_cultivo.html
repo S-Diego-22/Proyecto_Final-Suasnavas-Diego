@@ -1,0 +1,28 @@
+{% extends "app_paginas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<div class="container-fluid my-5">
+    <h1 class="text-center mb-4">Medio de cultivo</h1>
+    <div class="row gy-4">
+        {% for articulo in articulos %}
+        <div class="col-12">
+            <div class="row align-items-center 
+                {% if forloop.counter|divisibleby:2 %}
+                    flex-row-reverse
+                {% endif %}">
+                <div class="col-md-6">
+                    <img src="{{ articulo.imagen.url }}" class="img-fluid w-100 h-300 rounded" alt="{{ articulo.nombre }}">
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <p><h1>{{ articulo.nombre }}</h1></p>
+                    <p>{{ articulo.descripcion }}</p>
+                    <p><h2>Precio: {{ articulo.precio}}</h2></p>
+                    <a href= "{% url 'compras' %}"><h1 class="btn btn-primary mt-3">Comprar</h1></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "app_paginas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <a class="btn btn-primary mt-3" href= "{% url 'enviar mensaje' %}">Enviar nuevo mensaje</a>
+            <a class="btn btn-primary mt-3" href= "{% url 'mostrar mensajes' %}">Mostrar mensajes</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "app_paginas/base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+<div class="text-center my-4">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <h1 class= "text-center"> Mostrar mensajes </h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                    
+                {% for msj in chat %}
+                    <p> De: {{msj.remitente}} </p>
+                    <p> Mensaje: {{msj.mensaje}} </p>
+                    <p> Fecha de envio: {{msj.fecha_envio}} </p>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
